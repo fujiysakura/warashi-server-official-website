@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--「/warashi-server-official-website/templates/」を icon, stylesheet, fetchの前に記述すべし。-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>わらし鯖</title>
-    <link rel="icon" href="../templates/icon.png">
-    <link rel="stylesheet" href="../templates/menu.css">
+    <link rel="icon" href="/warashi-server-official-website/templates/icon.png">
+    <link rel="stylesheet" href="/warashi-server-official-website/templates/menu.css">
     <style>
         body {
+            /*画像が切れたら、新たな画像を追加するべし。*/
+            background-color: rgb(255, 250, 250);
             background-image: url();
             background-size: cover;
             background-position: center;
@@ -20,13 +23,19 @@
             top: 0;
         }
 
-        .main-text h1, h2, h3, h4, p {
+        /*
+        使用する場合は、コメントアウトを解除
+        .main-content {
+            
+        }
+        */
+
+        .main-content h1, h2, h3, h4 {
             text-align: center;
-            padding-top: 40px;
         }
 
-        .colored {
-            color: #ffccdd;
+        .main-content p {
+            text-align: center;
         }
 
         .important {
@@ -36,14 +45,14 @@
 </head>
 <body>
     <div id="menu"></div>
-    <div class="main-text">
+    <div class="main-content">
         <h1>参加する</h1>
-        <p>まだなにもありません。</p>
+        <p>まだ何もありません。</p>
     </div>
     <script>
         async function loadmanu() {
             try {
-                const response = await fetch("../templates/menu.html");
+                const response = await fetch("/warashi-server-official-website/templates/menu.html");
                 const data = await response.text();
                 document.getElementById("menu").innerHTML = data;
             } catch(error) {
