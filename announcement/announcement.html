@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>わらし鯖</title>
     <link rel="icon" href="../templates/icon.png">
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="../templates/menu.css">
     <style>
         body {
             background-image: url();
@@ -37,12 +37,13 @@
 <body>
     <div id="menu"></div>
     <div class="main-text">
-
+        <h1>お知らせ</h1>
+        <p>まだなにもありません。</p>
     </div>
     <script>
         async function loadmanu() {
             try {
-                const response = await fetch("./menu.html");
+                const response = await fetch("../templates/menu.html");
                 const data = await response.text();
                 document.getElementById("menu").innerHTML = data;
             } catch(error) {
