@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わらし鯖</title>
+    <link rel="icon" href="../templates/icon.png">
+    <link rel="stylesheet" href="../templates/menu.css">
+    <style>
+        body {
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 1000px;
+        }
+
+        #menu {
+            position: sticky;
+            top: 0;
+        }
+
+        .main-text h1, h2, h3, h4, p {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        .colored {
+            color: #ffccdd;
+        }
+
+        .important {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu"></div>
+    <div class="main-text">
+        <h1>参加する</h1>
+        <p>まだなにもありません。</p>
+    </div>
+    <script>
+        async function loadmanu() {
+            try {
+                const response = await fetch("../templates/menu.html");
+                const data = await response.text();
+                document.getElementById("menu").innerHTML = data;
+            } catch(error) {
+                console.error("エラー:", error);
+            }
+        }
+
+        loadmanu()
+    </script>
+</body>
+</html>
