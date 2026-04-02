@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>わらし鯖</title>
-    <link rel="icon" href="/warashi-server-official-website/templates/icon.png">
-    <link rel="stylesheet" href="/warashi-server-official-website/templates/menu.css">
+    <link rel="icon" href="./templates/icon.png">
+    <link rel="stylesheet" href="./templates/menu.css">
     <style>
         body {
             /*画像が切れたら、新たな画像を追加するべし。*/
@@ -29,6 +29,7 @@
         }
 
         .main-content h1, h2, h3, h4 {
+            color: #ffccdd;
             text-align: center;
         }
 
@@ -36,7 +37,7 @@
             text-align: center;
         }
 
-        .important {
+        .main-content .important {
             color: red;
         }
     </style>
@@ -44,13 +45,13 @@
 <body>
     <div id="menu"></div>
     <div class="main-content">
-        <h1 class="important">只今、準備中です。</h1>
+        <h1>只今、準備中です。</h1>
         <p class="important">近日公開</p>
     </div>
     <script>
         async function loadmanu() {
             try {
-                const response = await fetch("/warashi-server-official-website/templates/menu.html");
+                const response = await fetch("./templates/menu.html");
                 const data = await response.text();
                 document.getElementById("menu").innerHTML = data;
             } catch(error) {
