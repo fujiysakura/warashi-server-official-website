@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #ffccdd;
+    max-width: 100%;
+    opacity: 0.85;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #89501b;
+    display: inline-block;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: center;
+    transition: color 0.5s ease;
+} 
+
+ul :hover {
+    color: green;
+}
+
+    .home {
+        margin-right: auto;
+}
