@@ -37,7 +37,7 @@
     
         async function loadmanu() {
             try {
-                const response = await fetch("index.html");
+                const response = await fetch("menu.html");
                 const data = await response.text();
                 document.getElementById("menu").innerHTML = data;
             } catch(error) {
