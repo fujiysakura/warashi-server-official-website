@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--「/warashi-server-official-website/templates/」を icon, stylesheet, fetchの前に記述すべし。-->
+    <!--「/warashi-server-official-website/」を icon, stylesheet, fetchの前に記述すべし。-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>わらし鯖</title>
-    <link rel="icon" href="/warashi-server-official-website/templates/icon.png">
-    <link rel="stylesheet" href="/warashi-server-official-website/templates/menu.css">
+    <link rel="icon" href="./icon.png">
+    <link rel="stylesheet" href="./menu.css">
     <style>
         body {
             /*画像が切れたら、新たな画像を追加するべし。*/
@@ -39,18 +39,55 @@
         .main-content .important {
             color: red;
         }
+
+                @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes right-to-left {
+            from {
+                transform: translateX(1000px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        /*ボタン関連。*/
+        .button {
+            display: inline-block;
+            background-color: #ffccdd;
+            color: #7e3d00;
+            margin-top: 40px;
+            padding: 16px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            animation: fade-in 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .button:hover {
+            color: green;
+        }
     </style>
 </head>
 <body>
     <div id="menu"></div>
     <div class="main-content">
-        <h1>鯖情報</h1>
-        <p>まだ何もありません。</p>
+        
     </div>
     <script>
         async function loadmanu() {
             try {
-                const response = await fetch("/warashi-server-official-website/templates/menu.html");
+                const response = await fetch("./menu.html");
                 const data = await response.text();
                 document.getElementById("menu").innerHTML = data;
             } catch(error) {
