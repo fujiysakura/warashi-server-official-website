@@ -15,7 +15,7 @@ ul {
     display: flex;
 }
 
-a {
+#menu a {
     text-decoration: none;
     color: #7e3d00;
     display: inline-block;
