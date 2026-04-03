@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>わらし鯖</title>
     <link rel="icon" href="./icon.png">
-    <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="../templates/menu.css">
     <style>
         body {
             /*画像が切れたら、新たな画像を追加するべし。*/
@@ -25,16 +25,19 @@
         }
 
         .main-content {
-            margin-top: 100px;            
+            margin-top: 100px; 
+            text-align: center;           
         }
 
+        /*使うときになったらコメントアウトを解除すべし。
         .main-content h1, h2, h3, h4 {
-            text-align: center;
+        
         }
 
         .main-content p {
-            text-align: center;
+
         }
+        */
 
         .main-content .important {
             color: red;
@@ -82,12 +85,17 @@
 <body>
     <div id="menu"></div>
     <div class="main-content">
-        
+        <h1>鯖情報</h1>
+        <h2>ロビー「わらし温泉郷」</h2>
+        <h2>サバイバル鯖</h2>
+        <h2>イベント鯖</h2>
+        <p>準備中...</p>
+        <a class="button" href="">aaaaaaa</a>
     </div>
     <script>
         async function loadmanu() {
             try {
-                const response = await fetch("./menu.html");
+                const response = await fetch("../templates/menu.html");
                 const data = await response.text();
                 document.getElementById("menu").innerHTML = data;
             } catch(error) {
