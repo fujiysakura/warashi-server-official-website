@@ -25,28 +25,78 @@
         }
 
         .main-content {
-            margin-top: 100px;            
+            margin-top: 100px;
+            text-align: center;          
         }
 
         .main-content h1, h2, h3, h4 {
             color: #ffccdd;
-            text-align: center;
         }
 
         .main-content p {
-            text-align: center;
+            color: #77ff90;
         }
 
         .main-content .important {
             color: red;
         }
+
+        .welcome-message {
+            animation: fade-in 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .explain-text {
+            animation: right-to-left 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes right-to-left {
+            from {
+                transform: translateX(1000px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffccdd;
+            color: #7e3d00;
+            margin-top: 40px;
+            padding: 16px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            animation: fade-in 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .button:hover {
+            color: green;
+        }
+
     </style>
 </head>
 <body>
     <div id="menu"></div>
     <div class="main-content">
-        <h1>只今、準備中です。</h1>
-        <p class="important">近日公開</p>
+        <h1 class="welcome-message" style="font-size: 70px;">わらし鯖へようこそ！</h1>
+        <br>
+        <p class="explain-text">わらしとみんなで作り上げるマイクラコミュニティ<br>サバイバルからベッドウォーズをはじめとした各種ミニゲームまで</p>
+        <a class="button" href="">参加する→</a>
     </div>
     <script>
         async function loadmanu() {
