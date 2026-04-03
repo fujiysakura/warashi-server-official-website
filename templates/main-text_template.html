@@ -39,6 +39,44 @@
         .main-content .important {
             color: red;
         }
+
+                @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes right-to-left {
+            from {
+                transform: translateX(1000px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        /*ボタン関連。*/
+        .button {
+            display: inline-block;
+            background-color: #ffccdd;
+            color: #7e3d00;
+            margin-top: 40px;
+            padding: 16px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: color 0.5s ease;
+            animation: fade-in 3s;
+            animation-fill-mode: forwards;
+        }
+
+        .button:hover {
+            color: green;
+        }
     </style>
 </head>
 <body>
